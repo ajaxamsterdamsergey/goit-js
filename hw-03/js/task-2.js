@@ -1,8 +1,5 @@
 'use strict';
-const countProps = function(obj) {
-    const countKeys = Object.keys(obj).length;
-    return countKeys;
-};
+const countProps = obj => Object.keys(obj).length;
 const result = countProps({
     mail: 'poly@mail.com',
     isOnline: true,
