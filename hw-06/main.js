@@ -40,10 +40,14 @@ const getNamesSortedByFriendsCount = users =>
         .map(user => user.name);
 console.log(getNamesSortedByFriendsCount(users));
 
-const getSortedUniqueSkills = users =>
-    users.reduce((total, { skills }) => {
-        total.push(...skills);
-        return total;
-    }, []);
+const getSortedUniqueSkills = users => {
+    const skills = users.reduce(
+        (total, { skills }) => [...total, ...skills],
+        [],
+    );
+    /*  total.push(...skills);
+        return total; */
+    return [...new Set(skills)].sort();
+};
 
 console.log(getSortedUniqueSkills(users));
