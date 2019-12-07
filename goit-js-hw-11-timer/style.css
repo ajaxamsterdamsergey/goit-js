@@ -1,0 +1,13 @@
+.timer {
+    background-color: black;
+    display: flex;
+    width: 500px;
+    border: solid black 1px;
+}
+.field {
+    background-color: rgb(7, 201, 175);
+    text-align: center;
+    margin: 10px 20px;
+    justify-content: space-between;
+    font-size: 24px;
+}
